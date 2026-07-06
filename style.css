@@ -410,15 +410,11 @@ section{
 
 /* NEW LETTER BEHAVIOR */
 .paper{
-    position:absolute;
-    top:25px;
-
-    left:50%;
-    transform:translateX(-50%);
-
     width:95%;
     max-width:650px;
     height:420px;
+
+    margin:0 auto;
 
     background:#fff;
     border-radius:18px;
@@ -434,6 +430,8 @@ section{
     line-height:1.6;
 
     opacity:0;
+    transform:translateY(20px);
+
     transition:.6s ease;
 
     z-index:10;
