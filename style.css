@@ -333,6 +333,7 @@ section{
 .envelope{
 
     position:relative;
+    z-index:5;
 
     width:340px;
 
@@ -488,7 +489,7 @@ section{
 /* SHOW LETTER ON OPEN */
 .envelope.open .paper{
     opacity:1;
-    transform:translateY(0);
+    transform:translate(-50%, -50%);
 }
 
 /* =========================================
