@@ -411,8 +411,9 @@ section{
 /* NEW LETTER BEHAVIOR */
 .paper{
     position:absolute;
-    left:50%;
     top:25px;
+
+    left:50%;
     transform:translateX(-50%);
 
     width:95%;
@@ -433,8 +434,6 @@ section{
     line-height:1.6;
 
     opacity:0;
-    transform:translateY(20px);
-
     transition:.6s ease;
 
     z-index:10;
