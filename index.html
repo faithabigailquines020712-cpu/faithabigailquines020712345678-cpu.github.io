@@ -2,36 +2,48 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>For My Favorite Person ❤️</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+<!-- Floating petals -->
 <div id="petals"></div>
 
+<!-- Background Music -->
 <audio id="bgMusic" loop>
-
     <source src="assets/music.mp3" type="audio/mpeg">
-
 </audio>
 
-<!-- =======================================
-     HERO
-======================================= -->
+<!-- Floating Music Player -->
+
+<div id="musicPlayer">
+
+    <button id="playPause">
+        ▶
+    </button>
+
+    <div class="music-info">
+
+        <p>Our Song 💗</p>
+
+        <span>Playing while you scroll</span>
+
+    </div>
+
+</div>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -40,40 +52,23 @@
         <h1>Hi, love. 💗</h1>
 
         <p>
-            I made this little website just for you.
+
+            I made something for you.
+            I hope this little website makes you smile as much as you've made me smile.
+
         </p>
 
         <button id="startButton">
+
             ▶ Play this while you scroll
+
         </button>
 
     </div>
 
 </section>
 
-<!-- =======================================
-     MUSIC PLAYER
-======================================= -->
-
-<div id="musicPlayer">
-
-    <button id="playPause">
-
-        ⏸
-
-    </button>
-
-    <span>
-
-        Our Song 🎵
-
-    </span>
-
-</div>
-
-<!-- =======================================
-     LETTER
-======================================= -->
+<!-- LETTER -->
 
 <section class="letter-section">
 
@@ -87,41 +82,35 @@
 
     <div class="envelope" id="envelope">
 
-        <div class="envelope-front"></div>
+        <div class="front"></div>
 
-        <div class="envelope-flap"></div>
+        <div class="flap"></div>
 
         <div class="paper">
 
-            <div class="paper-content">
+            <h3>My Love,</h3>
 
-                <h3>My Love,</h3>
+            <div class="letter-text">
 
-                <p>
+                Replace this with your real letter.
 
-                    (Replace this with your own letter.)
+                <br><br>
 
-                </p>
+                I wanted to make something that you could always come back to whenever you miss me.
 
-                <p>
+                <br><br>
 
-                    I wanted to make something that you could keep forever.
-                    Every little surprise here was chosen because it reminded me of you.
+                Every surprise here was chosen because it reminded me of you.
 
-                </p>
+                <br><br>
 
-                <p>
+                I hope this makes your day just a little brighter.
 
-                    Thank you for always making me smile.
-                    I hope this tiny website can make you smile too.
+            </div>
 
-                </p>
+            <div class="signature">
 
-                <p>
-
-                    I love you so much. ❤️
-
-                </p>
+                Love always ❤️
 
             </div>
 
@@ -131,9 +120,7 @@
 
 </section>
 
-<!-- =======================================
-     BOUQUET
-======================================= -->
+<!-- BOUQUET -->
 
 <section class="bouquet-section">
 
@@ -141,7 +128,7 @@
 
     <p class="bouquet-text">
 
-        Click to unwrap them.
+        Click the bouquet to unwrap it.
 
     </p>
 
@@ -171,14 +158,14 @@
 
     <p class="bouquet-message">
 
-        I wish I could hand these to you in person every single day.
+        I wish I could hand these to you in person every single day. 🤍
 
     </p>
 
 </section>
 
 <!-- =======================================
-     GIFTS SECTION
+     GIFTS
 ======================================= -->
 
 <section class="gifts-section">
@@ -186,12 +173,15 @@
     <h2>Now... your presents! 🎁</h2>
 
     <p class="gift-intro">
-        I hope you like every little thing. 💗
+
+        I hope you like every single one of them.
+
     </p>
 
     <div class="gifts-grid">
 
         <!-- Gift 1 -->
+
         <div class="gift-card">
 
             <div class="gift-box" id="gift1">
@@ -204,19 +194,21 @@
 
             </div>
 
-            <img
-                src="assets/snacks.png"
-                class="gift-image"
-                id="snacksImage"
-                alt="Snacks">
+            <img src="assets/snacks.png"
+                 id="snacksImage"
+                 class="gift-image"
+                 alt="Snacks">
 
             <p class="gift-message">
-                For whenever you're craving something yummy. 🍪
+
+                For whenever you're craving your favorite snacks. 🍪
+
             </p>
 
         </div>
 
         <!-- Gift 2 -->
+
         <div class="gift-card">
 
             <div class="gift-box" id="gift2">
@@ -229,19 +221,21 @@
 
             </div>
 
-            <img
-                src="assets/fairylights.png"
-                class="gift-image"
-                id="fairyImage"
-                alt="Fairy Lights">
+            <img src="assets/fairylights.png"
+                 id="fairyImage"
+                 class="gift-image"
+                 alt="Fairy Lights">
 
             <p class="gift-message">
-                I remembered you wanted fairy lights. ✨
+
+                I remembered you said you wanted fairy lights. ✨
+
             </p>
 
         </div>
 
         <!-- Gift 3 -->
+
         <div class="gift-card">
 
             <div class="gift-box" id="gift3">
@@ -254,19 +248,21 @@
 
             </div>
 
-            <img
-                src="assets/perfume.png"
-                class="gift-image"
-                id="perfumeImage"
-                alt="Perfume">
+            <img src="assets/perfume.png"
+                 id="perfumeImage"
+                 class="gift-image"
+                 alt="Perfume">
 
             <p class="gift-message">
+
                 So you'll always have my favorite scent with you. 🌸
+
             </p>
 
         </div>
 
         <!-- Gift 4 -->
+
         <div class="gift-card final-gift">
 
             <div class="gift-box glowing" id="gift4">
@@ -279,14 +275,15 @@
 
             </div>
 
-            <img
-                src="assets/earphones.png"
-                class="gift-image"
-                id="earphonesImage"
-                alt="Bluetooth Earphones">
+            <img src="assets/earphones.png"
+                 id="earphonesImage"
+                 class="gift-image"
+                 alt="Bluetooth Earphones">
 
             <p class="gift-message final-message">
+
                 I hope every song you listen to reminds you of us. 🎧❤️
+
             </p>
 
         </div>
@@ -301,18 +298,23 @@
 
 <section class="ending-section">
 
-    <h2>Thank you for existing. 💖</h2>
+    <h2>I love you. ❤️</h2>
 
     <p>
 
         Thank you for every smile,
         every laugh,
+        every hug,
         every memory,
-        and every moment you've shared with me.
+        and every moment we've shared together.
 
         <br><br>
 
-        I love you so much.
+        I hope these little gifts remind you just how much you mean to me.
+
+        <br><br>
+
+        Happy gift opening, love. 🤍
 
     </p>
 
@@ -327,4 +329,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
