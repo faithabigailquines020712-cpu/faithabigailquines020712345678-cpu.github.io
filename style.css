@@ -302,9 +302,17 @@ section{
 
 .letter-section{
 
+    min-height:1100px;
+
     padding:120px 20px;
 
-    text-align:center;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
 
 }
 
