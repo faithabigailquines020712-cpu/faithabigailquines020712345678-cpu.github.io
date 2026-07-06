@@ -3,24 +3,180 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For My Favorite Person ❤️</title>
+    <title>For My Favorite Person ❤️</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-     
+
+<div id="petals"></div>
+
+<audio id="bgMusic" loop>
+
+    <source src="assets/music.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- =======================================
+     HERO
+======================================= -->
+
+<section class="hero">
+
+    <div class="glass">
+
+        <h1>Hi, love. 💗</h1>
+
+        <p>
+            I made this little website just for you.
+        </p>
+
+        <button id="startButton">
+            ▶ Play this while you scroll
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+     MUSIC PLAYER
+======================================= -->
+
+<div id="musicPlayer">
+
+    <button id="playPause">
+
+        ⏸
+
+    </button>
+
+    <span>
+
+        Our Song 🎵
+
+    </span>
+
+</div>
+
+<!-- =======================================
+     LETTER
+======================================= -->
+
+<section class="letter-section">
+
+    <h2>A little letter for you 💌</h2>
+
+    <p class="letter-subtitle">
+
+        Click the envelope.
+
+    </p>
+
+    <div class="envelope" id="envelope">
+
+        <div class="envelope-front"></div>
+
+        <div class="envelope-flap"></div>
+
+        <div class="paper">
+
+            <div class="paper-content">
+
+                <h3>My Love,</h3>
+
+                <p>
+
+                    (Replace this with your own letter.)
+
+                </p>
+
+                <p>
+
+                    I wanted to make something that you could keep forever.
+                    Every little surprise here was chosen because it reminded me of you.
+
+                </p>
+
+                <p>
+
+                    Thank you for always making me smile.
+                    I hope this tiny website can make you smile too.
+
+                </p>
+
+                <p>
+
+                    I love you so much. ❤️
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+     BOUQUET
+======================================= -->
+
+<section class="bouquet-section">
+
+    <h2>Flowers first 🌷</h2>
+
+    <p class="bouquet-text">
+
+        Click to unwrap them.
+
+    </p>
+
+    <div class="bouquet-wrapper" id="bouquetWrapper">
+
+        <div class="bouquet-cover">
+
+            <div class="paper-wrap"></div>
+
+            <div class="ribbon"></div>
+
+            <div class="click-text">
+
+                Click Me 💐
+
+            </div>
+
+        </div>
+
+        <img
+            src="assets/bouquet.png"
+            id="bouquetImage"
+            class="bouquet-image"
+            alt="Bouquet">
+
+    </div>
+
+    <p class="bouquet-message">
+
+        I wish I could hand these to you in person every single day.
+
+    </p>
+
+</section>
+
 <!-- =======================================
      GIFTS SECTION
 ======================================= -->
@@ -167,3 +323,8 @@
     </div>
 
 </section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
