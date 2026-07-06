@@ -420,7 +420,7 @@ section{
 
     width:90%;
 
-    min-height:280px;
+    height:430px;
 
     background:white;
 
@@ -434,7 +434,7 @@ section{
 
     z-index:2;
 
-    overflow:auto;
+    overflow-y:auto;
 
 }
 
@@ -488,7 +488,7 @@ section{
 
 .envelope.open .paper{
 
-    top:-170px;
+    top:-250px;
 
 }
 
@@ -508,7 +508,7 @@ section{
 
 .bouquet-section{
 
-    padding:120px 20px;
+    padding:260px 20px 120px;
 
     text-align:center;
 
