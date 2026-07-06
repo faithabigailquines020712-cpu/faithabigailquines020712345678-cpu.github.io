@@ -422,27 +422,27 @@ section{
 
     left:50%;
 
-    top:18px;
+    top:25px;
 
     transform:translateX(-50%);
 
-    width:90%;
+    width:88%;
 
-    height:430px;
+    height:240px;
 
     background:white;
 
     border-radius:15px;
 
-    padding:25px;
+    padding:20px;
+
+    overflow-y:auto;
 
     box-shadow:0 12px 25px rgba(0,0,0,.12);
 
-    transition:.7s;
+    transition:.6s;
 
     z-index:2;
-
-    overflow-y:auto;
 
 }
 
@@ -496,7 +496,7 @@ section{
 
 .envelope.open .paper{
 
-    top:-250px;
+    top:-80px;
 
 }
 
