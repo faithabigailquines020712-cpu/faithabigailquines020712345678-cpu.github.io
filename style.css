@@ -308,8 +308,6 @@ section{
 
 }
 
-}
-
 .letter-section h2{
 
     font-size:2.5rem;
@@ -410,34 +408,35 @@ section{
 
 }
 
+/* NEW LETTER BEHAVIOR */
 .paper{
-
     position:absolute;
-
     left:50%;
-
     top:25px;
-
     transform:translateX(-50%);
 
-    width:88%;
+    margin:20px auto;
 
-    height:240px;
+    background:#fff;
+    border-radius:18px;
 
-    background:white;
-
-    border-radius:15px;
-
-    padding:20px;
+    padding:25px;
 
     overflow-y:auto;
 
-    box-shadow:0 12px 25px rgba(0,0,0,.12);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 
-    transition:.6s;
+    font-family:'Caveat',cursive;
+    font-size:18px;
+    line-height:1.6;
 
-    z-index:2;
+    opacity:0;
+    transform:translateY(20px);
 
+    transition:.6s ease;
+
+    z-index:10;
+   
 }
 
 .paper h3{
@@ -488,10 +487,10 @@ section{
 
 }
 
+/* SHOW LETTER ON OPEN */
 .envelope.open .paper{
-
-    top:-80px;
-
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* =========================================
