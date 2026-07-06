@@ -6,7 +6,13 @@ const bgMusic = document.getElementById("bgMusic");
 const startButton = document.getElementById("startButton");
 const playPause = document.getElementById("playPause");
 
-startButton.addEventListener("click", () => {
+if (startButton) {
+
+    startButton.addEventListener("click", () => {
+
+    });
+
+}
 
     bgMusic.play();
 
@@ -16,39 +22,44 @@ startButton.addEventListener("click", () => {
 
 });
 
-playPause.addEventListener("click", () => {
+if (playPause) {
 
-    if(bgMusic.paused){
+    playPause.addEventListener("click", () => {
 
-        bgMusic.play();
+        if(bgMusic.paused){
 
-        playPause.innerHTML = "⏸";
+            bgMusic.play();
 
-    }
+            playPause.innerHTML="⏸";
 
-    else{
+        }
 
-        bgMusic.pause();
+        else{
 
-        playPause.innerHTML = "▶";
+            bgMusic.pause();
 
-    }
+            playPause.innerHTML="▶";
 
-});
+        }
+
+    });
+
+}
 
 
 /* =========================================
    ENVELOPE
 ========================================= */
 
-const envelope = document.getElementById("envelope");
+if (envelope) {
 
-envelope.addEventListener("click", () => {
+    envelope.addEventListener("click", () => {
 
-    envelope.classList.toggle("open");
+        envelope.classList.toggle("open");
 
-});
+    });
 
+}
 
 /* =========================================
    FLOATING PETALS
