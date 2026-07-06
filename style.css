@@ -1,6 +1,6 @@
-/* ==========================
-   GOOGLE RESET
-========================== */
+/* =========================================
+   RESET
+========================================= */
 
 *{
     margin:0;
@@ -18,36 +18,30 @@ body{
 
     background:linear-gradient(
         180deg,
-        #fff7fb 0%,
-        #ffeef5 35%,
-        #ffe4ef 100%
+        #fff8fc 0%,
+        #fff2f8 45%,
+        #ffe7f2 100%
     );
-
-    overflow-x:hidden;
 
     color:#5b4452;
 
+    overflow-x:hidden;
+
 }
 
-/* ==========================
+/* =========================================
    FLOATING PETALS
-========================== */
+========================================= */
 
 #petals{
 
     position:fixed;
 
-    width:100%;
-
-    height:100%;
-
-    top:0;
-
-    left:0;
-
-    pointer-events:none;
+    inset:0;
 
     overflow:hidden;
+
+    pointer-events:none;
 
     z-index:1;
 
@@ -61,15 +55,13 @@ body{
 
     height:18px;
 
-    background:#ffc8da;
+    background:#ffc5dc;
 
     border-radius:60% 0 60% 60%;
 
-    opacity:.75;
-
     animation:fall linear forwards;
 
-    filter:blur(.2px);
+    opacity:.75;
 
 }
 
@@ -93,9 +85,9 @@ body{
 
 }
 
-/* ==========================
-   HERO SECTION
-========================== */
+/* =========================================
+   HERO
+========================================= */
 
 .hero{
 
@@ -119,11 +111,9 @@ body{
 
     width:min(700px,92%);
 
-    background:rgba(255,255,255,.45);
+    background:rgba(255,255,255,.55);
 
     backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.6);
 
     border-radius:30px;
 
@@ -134,7 +124,9 @@ body{
     box-shadow:
     0 20px 60px rgba(0,0,0,.08);
 
-    animation:fadeUp 1.2s ease;
+    border:1px solid rgba(255,255,255,.7);
+
+    animation:fadeUp 1s ease;
 
 }
 
@@ -142,7 +134,7 @@ body{
 
     font-size:3rem;
 
-    color:#d96592;
+    color:#df6b99;
 
     margin-bottom:20px;
 
@@ -150,19 +142,19 @@ body{
 
 .glass p{
 
-    line-height:1.9;
-
     font-size:1.1rem;
 
-    color:#755f69;
+    line-height:1.8;
+
+    color:#6b5963;
 
 }
 
 #startButton{
 
-    margin-top:40px;
+    margin-top:35px;
 
-    padding:16px 42px;
+    padding:15px 38px;
 
     border:none;
 
@@ -179,7 +171,7 @@ body{
     transition:.35s;
 
     box-shadow:
-    0 10px 30px rgba(239,134,175,.4);
+    0 10px 25px rgba(239,134,175,.35);
 
 }
 
@@ -187,60 +179,40 @@ body{
 
     transform:
     translateY(-5px)
-    scale(1.05);
-
-    background:#e66b9c;
+    scale(1.04);
 
 }
 
-/* ==========================
+/* =========================================
    MUSIC PLAYER
-========================== */
+========================================= */
 
 #musicPlayer{
 
     position:fixed;
 
-    right:25px;
+    right:20px;
 
-    bottom:25px;
-
-    width:250px;
+    bottom:20px;
 
     background:rgba(255,255,255,.75);
 
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(15px);
 
-    border-radius:25px;
+    border-radius:20px;
 
     padding:15px 20px;
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
+    gap:15px;
+
     box-shadow:
-    0 10px 35px rgba(0,0,0,.12);
+    0 10px 30px rgba(0,0,0,.12);
 
     z-index:999;
-
-}
-
-.music-info span{
-
-    font-size:.8rem;
-
-    color:#999;
-
-}
-
-.music-info p{
-
-    font-size:.95rem;
-
-    font-weight:600;
 
 }
 
@@ -250,17 +222,17 @@ body{
 
     height:50px;
 
-    border-radius:50%;
-
     border:none;
+
+    border-radius:50%;
 
     background:#ef86af;
 
     color:white;
 
-    cursor:pointer;
-
     font-size:1rem;
+
+    cursor:pointer;
 
     transition:.3s;
 
@@ -268,27 +240,29 @@ body{
 
 #playPause:hover{
 
-    transform:scale(1.1);
+    transform:scale(1.08);
 
 }
 
-/* ==========================
-   LETTER SECTION
-========================== */
+.music-info p{
 
-.letter-section{
+    font-weight:600;
 
-    min-height:100vh;
+}
 
-    display:flex;
+.music-info span{
 
-    flex-direction:column;
+    font-size:.82rem;
 
-    justify-content:center;
+    color:#888;
 
-    align-items:center;
+}
 
-    padding:100px 20px;
+/* =========================================
+   GLOBAL SECTIONS
+========================================= */
+
+section{
 
     position:relative;
 
@@ -296,273 +270,9 @@ body{
 
 }
 
-.letter-section h2{
-
-    font-size:2.3rem;
-
-    color:#d96b97;
-
-    margin-bottom:60px;
-
-}
-
-/* ==========================
-   ENVELOPE
-========================== */
-
-.envelope{
-
-    position:relative;
-
-    width:420px;
-
-    height:280px;
-
-    cursor:pointer;
-
-    perspective:1500px;
-
-}
-
-/* Envelope Body */
-
-.front{
-
-    position:absolute;
-
-    inset:0;
-
-    background:#fff8f2;
-
-    border-radius:12px;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.15);
-
-    overflow:hidden;
-
-}
-
-/* Bottom Triangle */
-
-.front::before{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:#f7e7dc;
-
-    clip-path:polygon(
-        0 0,
-        50% 55%,
-        100% 0,
-        100% 100%,
-        0 100%
-    );
-
-}
-
-/* Top Flap */
-
-.flap{
-
-    position:absolute;
-
-    inset:0;
-
-    background:#f3ddd2;
-
-    clip-path:polygon(
-        0 0,
-        100% 0,
-        50% 60%
-    );
-
-    transform-origin:top;
-
-    transition:1s;
-
-    z-index:10;
-
-}
-
-/* Wax Seal */
-
-.flap::after{
-
-    content:"❤";
-
-    position:absolute;
-
-    left:50%;
-
-    top:56%;
-
-    transform:translate(-50%,-50%);
-
-    width:58px;
-
-    height:58px;
-
-    border-radius:50%;
-
-    background:#ef86af;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:white;
-
-    font-size:22px;
-
-    box-shadow:
-    0 8px 20px rgba(239,134,175,.35);
-
-}
-
-/* ==========================
-   LETTER PAPER
-========================== */
-
-.paper{
-
-    position:absolute;
-
-    left:20px;
-
-    right:20px;
-
-    bottom:15px;
-
-    height:420px;
-
-    background:white;
-
-    border-radius:12px;
-
-    padding:40px;
-
-    transform:translateY(250px);
-
-    transition:1s;
-
-    box-shadow:
-    0 15px 30px rgba(0,0,0,.08);
-
-    overflow:auto;
-
-    z-index:2;
-
-}
-
-.paper h3{
-
-    font-size:2rem;
-
-    font-family:'Caveat',cursive;
-
-    color:#d96b97;
-
-    margin-bottom:20px;
-
-}
-
-.letter-text{
-
-    font-family:'Caveat',cursive;
-
-    font-size:2rem;
-
-    line-height:1.7;
-
-    color:#555;
-
-}
-
-.signature{
-
-    margin-top:40px;
-
-    font-family:'Caveat',cursive;
-
-    font-size:2rem;
-
-    color:#d96b97;
-
-}
-
-/* ==========================
-   OPEN ANIMATION
-========================== */
-
-.envelope.open .flap{
-
-    transform:
-    rotateX(180deg);
-
-}
-
-.envelope.open .paper{
-
-    transform:
-    translateY(-180px);
-
-}
-
-/* ==========================
-   LITTLE GLOW
-========================== */
-
-.envelope:hover{
-
-    transform:translateY(-5px);
-
-    transition:.4s;
-
-}
-
-.envelope::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-15px;
-
-    border-radius:20px;
-
-    background:radial-gradient(
-        rgba(255,255,255,.6),
-        transparent
-    );
-
-    opacity:0;
-
-    transition:.5s;
-
-}
-
-.envelope:hover::after{
-
-    opacity:1;
-
-}
-
-/* ==========================
-   FADE UP ANIMATION
-========================== */
+/* =========================================
+   ANIMATIONS
+========================================= */
 
 @keyframes fadeUp{
 
@@ -571,7 +281,7 @@ body{
         opacity:0;
 
         transform:
-        translateY(50px);
+        translateY(40px);
 
     }
 
@@ -586,23 +296,221 @@ body{
 
 }
 
-/* ========================================
+/* =========================================
+   LETTER SECTION
+========================================= */
+
+.letter-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.letter-section h2{
+
+    font-size:2.5rem;
+
+    color:#df6b99;
+
+    margin-bottom:10px;
+
+}
+
+.letter-subtitle{
+
+    color:#8b6b78;
+
+    margin-bottom:50px;
+
+}
+
+/* =========================================
+   ENVELOPE
+========================================= */
+
+.envelope{
+
+    position:relative;
+
+    width:340px;
+
+    height:220px;
+
+    margin:auto;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.envelope:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.front{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#f7b8cf;
+
+    border-radius:0 0 18px 18px;
+
+    z-index:3;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.front::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        transparent 50%,
+        rgba(255,255,255,.18) 50%
+    );
+
+}
+
+.flap{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:110px;
+
+    background:#ef86af;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    transition:.7s;
+
+    z-index:5;
+
+}
+
+.paper{
+
+    position:absolute;
+
+    left:50%;
+
+    top:18px;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    min-height:280px;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+    transition:.7s;
+
+    z-index:2;
+
+    overflow:auto;
+
+}
+
+.paper h3{
+
+    font-family:'Caveat',cursive;
+
+    font-size:2rem;
+
+    color:#df6b99;
+
+    margin-bottom:15px;
+
+}
+
+.letter-text{
+
+    line-height:1.8;
+
+    color:#666;
+
+    font-size:1rem;
+
+    text-align:left;
+
+}
+
+.signature{
+
+    margin-top:25px;
+
+    font-family:'Caveat',cursive;
+
+    font-size:2rem;
+
+    color:#df6b99;
+
+    text-align:right;
+
+}
+
+/* =========================================
+   OPEN ENVELOPE
+========================================= */
+
+.envelope.open .flap{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .paper{
+
+    top:-170px;
+
+}
+
+/* =========================================
+   SCROLL SPACING
+========================================= */
+
+.letter-section{
+
+    margin-bottom:100px;
+
+}
+
+/* =========================================
    BOUQUET SECTION
-======================================== */
+========================================= */
 
 .bouquet-section{
 
-    min-height:100vh;
+    padding:120px 20px;
 
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:100px 20px;
+    text-align:center;
 
 }
 
@@ -610,17 +518,17 @@ body{
 
     font-size:2.5rem;
 
-    color:#d86c99;
+    color:#df6b99;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
 
 }
 
 .bouquet-text{
 
-    color:#888;
+    color:#8b6b78;
 
-    margin-bottom:45px;
+    margin-bottom:40px;
 
 }
 
@@ -628,7 +536,11 @@ body{
 
     position:relative;
 
-    width:280px;
+    width:260px;
+
+    height:260px;
+
+    margin:auto;
 
     cursor:pointer;
 
@@ -636,83 +548,43 @@ body{
 
 .bouquet-cover{
 
-    width:100%;
+    position:absolute;
 
-    height:340px;
+    inset:0;
 
-    background:#f7e7dc;
+    background:linear-gradient(135deg,#ffd6e8,#ffb6d5);
 
     border-radius:20px;
 
-    position:relative;
+    display:flex;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
 
     transition:.5s;
 
-}
-
-.paper-wrap{
-
-    position:absolute;
-
-    inset:15px;
-
-    border:2px dashed rgba(0,0,0,.08);
-
-    border-radius:18px;
+    z-index:2;
 
 }
 
-.ribbon{
+.bouquet-cover:hover{
 
-    position:absolute;
-
-    width:100%;
-
-    height:18px;
-
-    background:#ef86af;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-}
-
-.ribbon::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    top:50%;
-
-    width:35px;
-
-    height:35px;
-
-    background:#ef86af;
-
-    border-radius:50%;
-
-    transform:translate(-50%,-50%);
+    transform:scale(1.05);
 
 }
 
 .click-text{
 
-    position:absolute;
+    font-weight:600;
 
-    width:100%;
-
-    bottom:25px;
-
-    text-align:center;
-
-    color:#777;
+    color:white;
 
 }
 
@@ -724,37 +596,27 @@ body{
 
     border-radius:20px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
-
-    animation:fadeUp .8s ease;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
 
 }
 
 .bouquet-message{
 
-    margin-top:30px;
+    margin-top:25px;
 
-    max-width:600px;
-
-    text-align:center;
-
-    color:#666;
+    color:#7a5a67;
 
     display:none;
 
-    line-height:1.8;
-
 }
 
-/* ========================================
-   GIFTS
-======================================== */
+/* =========================================
+   GIFTS SECTION
+========================================= */
 
 .gifts-section{
 
-    min-height:100vh;
-
-    padding:100px 40px;
+    padding:120px 20px;
 
     text-align:center;
 
@@ -762,19 +624,19 @@ body{
 
 .gifts-section h2{
 
-    font-size:2.6rem;
+    font-size:2.5rem;
 
-    color:#d86c99;
+    color:#df6b99;
+
+    margin-bottom:10px;
 
 }
 
 .gift-intro{
 
-    margin-top:10px;
+    color:#8b6b78;
 
-    color:#888;
-
-    margin-bottom:60px;
+    margin-bottom:50px;
 
 }
 
@@ -782,49 +644,45 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    gap:45px;
+    gap:30px;
+
+    max-width:1000px;
+
+    margin:auto;
 
 }
 
 .gift-card{
 
-    background:rgba(255,255,255,.45);
+    background:rgba(255,255,255,.6);
 
-    backdrop-filter:blur(15px);
+    padding:20px;
 
-    border-radius:25px;
+    border-radius:20px;
 
-    padding:30px;
+    backdrop-filter:blur(10px);
 
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
 .gift-box{
 
-    position:relative;
+    width:120px;
 
-    width:160px;
-
-    height:160px;
-
-    margin:auto;
+    height:120px;
 
     background:#ef86af;
 
-    border-radius:15px;
+    margin:auto;
+
+    position:relative;
+
+    border-radius:12px;
 
     cursor:pointer;
-
-    transition:.35s;
-
-}
-
-.gift-box:hover{
-
-    transform:translateY(-8px) scale(1.03);
 
 }
 
@@ -832,15 +690,15 @@ body{
 
     position:absolute;
 
-    width:175px;
+    top:-10px;
 
-    height:35px;
+    left:0;
 
-    background:#f5a6c5;
+    width:100%;
 
-    left:-7px;
+    height:30px;
 
-    top:-15px;
+    background:#ff9fc0;
 
     border-radius:10px;
 
@@ -848,15 +706,20 @@ body{
 
 }
 
-.gift-ribbon-vertical{
+.gift-ribbon-vertical,
+.gift-ribbon-horizontal{
 
     position:absolute;
 
-    width:18px;
+    background:white;
+
+}
+
+.gift-ribbon-vertical{
+
+    width:10px;
 
     height:100%;
-
-    background:white;
 
     left:50%;
 
@@ -866,13 +729,9 @@ body{
 
 .gift-ribbon-horizontal{
 
-    position:absolute;
+    height:10px;
 
     width:100%;
-
-    height:18px;
-
-    background:white;
 
     top:50%;
 
@@ -882,77 +741,49 @@ body{
 
 .gift-image{
 
+    width:100%;
+
+    margin-top:15px;
+
     display:none;
 
-    width:220px;
-
-    margin:30px auto 0;
-
-    border-radius:18px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-    animation:fadeUp .8s ease;
+    border-radius:15px;
 
 }
 
 .gift-message{
 
+    margin-top:10px;
+
+    font-size:.9rem;
+
+    color:#6f5a66;
+
     display:none;
 
-    margin-top:25px;
+}
 
-    color:#666;
+/* FINAL GIFT */
 
-    line-height:1.7;
+.final-gift .gift-box{
+
+    box-shadow:0 0 20px rgba(239,134,175,.6);
 
 }
 
-.glowing{
+.final-message{
 
-    animation:glow 2s infinite;
-
-}
-
-@keyframes glow{
-
-    0%{
-
-        box-shadow:0 0 0 rgba(239,134,175,.3);
-
-    }
-
-    50%{
-
-        box-shadow:0 0 35px rgba(239,134,175,.65);
-
-    }
-
-    100%{
-
-        box-shadow:0 0 0 rgba(239,134,175,.3);
-
-    }
+    font-weight:600;
 
 }
 
-/* ========================================
-   ENDING
-======================================== */
+/* =========================================
+   ENDING SECTION
+========================================= */
 
 .ending-section{
 
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:60px 25px;
+    padding:120px 20px;
 
     text-align:center;
 
@@ -960,63 +791,71 @@ body{
 
 .ending-section h2{
 
-    font-size:3rem;
+    font-size:2.5rem;
 
-    color:#d86c99;
+    color:#df6b99;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
 .ending-section p{
 
-    max-width:700px;
+    max-width:600px;
 
-    line-height:2;
+    margin:auto;
 
-    color:#666;
+    line-height:1.8;
 
-    font-size:1.05rem;
+    color:#7a5a67;
 
 }
 
 .heart{
 
-    margin-top:45px;
+    font-size:3rem;
 
-    font-size:70px;
+    margin-top:30px;
 
-    animation:heartbeat 1.2s infinite;
-
-}
-
-@keyframes heartbeat{
-
-    0%{
-
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        transform:scale(1.18);
-
-    }
-
-    100%{
-
-        transform:scale(1);
-
-    }
+    animation:beat 1.2s infinite;
 
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+@keyframes beat{
 
-@media(max-width:768px){
+    0%,100%{transform:scale(1);}
+
+    50%{transform:scale(1.2);}
+
+}
+
+/* =========================================
+   SMALL ANIMATIONS + FIXES
+========================================= */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width:768px){
 
     .glass{
 
@@ -1032,20 +871,46 @@ body{
 
     .envelope{
 
-        width:320px;
+        width:280px;
+
+        height:190px;
 
     }
 
     .paper{
 
-        height:390px;
+        min-height:250px;
 
     }
 
-    .gift-image{
+    .gift-box{
 
-        width:180px;
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .bouquet-wrapper{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+    #musicPlayer{
+
+        right:10px;
+
+        bottom:10px;
+
+        transform:scale(.9);
 
     }
 
 }
+
+/* =========================================
+   END OF CSS
+========================================= */
